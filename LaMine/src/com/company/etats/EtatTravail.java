@@ -1,0 +1,46 @@
+package com.company.etats;
+
+import java.util.Random;
+
+public class EtatTravail extends Etat{
+
+
+    public EtatTravail(float tauxAlcool) {
+        super(tauxAlcool);
+    }
+
+    @Override
+    public Etat transition() {
+        Etat etat;
+
+        Random random = new Random();
+        int cassage = random.nextInt(99)+1;
+
+        float tauxCassage = 15;
+
+        if (super.getTauxAlcool() > 0){
+            tauxCassage += tauxCassage * super.getTauxAlcool() * 8 /100;
+        }
+
+        if (cassage <= tauxCassage){
+           etat = new EtatForgeron(super.getTauxAlcool());
+        }
+        else{
+            etat = new EtatPause(super.getTauxAlcool());
+        }
+
+        System.out.println("Taux Alcool : " + super.getTauxAlcool());
+
+
+        return etat;
+    }
+
+    @Override
+    public void action() {
+        System.out.println("Etat Travail");
+
+        if(super.getTauxAlcool() >= 0.15){
+            super.setTauxAlcool((float) (super.getTauxAlcool() - 0.15));
+        }
+    }
+}
