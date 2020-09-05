@@ -27,6 +27,15 @@ public class EtatPause extends Etat{
             super.setTauxAlcool((float) (super.getTauxAlcool() - 0.10));
         }
 
+        super.setTauxAlcool((float) (super.getTauxAlcool() + super.getTauxAlcoolBiere()));
 
+
+
+
+    }
+
+    @Override
+    public String getNomEtat() {
+        return "EtatPause";
     }
 }

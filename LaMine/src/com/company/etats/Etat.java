@@ -22,6 +22,7 @@ public abstract class Etat {
         return tauxAlcoolBiere;
     }
 
+
     public void setTauxAlcool(float tauxAlcool) {
         this.tauxAlcool = tauxAlcool;
     }
@@ -36,5 +37,8 @@ public abstract class Etat {
      * Réalise l'action de l'état en cours
      */
     public abstract void action();
+
+    public abstract String getNomEtat();
+
 }
 

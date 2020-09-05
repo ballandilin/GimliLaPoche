@@ -18,4 +18,9 @@ public class EtatSieste2 extends Etat{
         System.out.println("Etat Sieste 2");
 
     }
+
+    @Override
+    public String getNomEtat() {
+        return "EtatSieste";
+    }
 }

@@ -51,4 +51,9 @@ public class EtatTaverne extends Etat{
 
 
     }
+
+    @Override
+    public String getNomEtat() {
+        return "EtatTaverne";
+    }
 }

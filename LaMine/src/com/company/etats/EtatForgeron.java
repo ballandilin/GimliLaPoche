@@ -28,4 +28,9 @@ public class EtatForgeron extends Etat{
             super.setTauxAlcool((float) (super.getTauxAlcool() - 0.1));
         }
     }
+
+    @Override
+    public String getNomEtat() {
+        return "EtatForgeron";
+    }
 }

@@ -20,4 +20,9 @@ public class EtatSieste1 extends Etat{
 
         super.setTauxAlcool(0);
     }
+
+    @Override
+    public String getNomEtat() {
+        return "EtatSieste";
+    }
 }

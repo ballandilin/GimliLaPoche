@@ -43,4 +43,9 @@ public class EtatTravail extends Etat{
             super.setTauxAlcool((float) (super.getTauxAlcool() - 0.15));
         }
     }
+
+    @Override
+    public String getNomEtat() {
+        return "EtatTravail";
+    }
 }

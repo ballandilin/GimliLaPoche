@@ -20,4 +20,9 @@ public class EtatSieste3 extends Etat{
 
 
     }
+
+    @Override
+    public String getNomEtat() {
+        return "EtatSieste";
+    }
 }
