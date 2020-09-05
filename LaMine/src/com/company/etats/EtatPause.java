@@ -24,9 +24,8 @@ public class EtatPause extends Etat{
     public void action() {
         System.out.println("Etat Pause");
         if (super.getTauxAlcool() >= 0.10){
-            super.setTauxAlcool((float) (super.getTauxAlcool() - 0.1));
+            super.setTauxAlcool((float) (super.getTauxAlcool() - 0.10));
         }
-        super.setTauxAlcool(super.getTauxAlcoolBiere());
 
 
     }
