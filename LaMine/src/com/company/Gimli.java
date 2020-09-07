@@ -20,9 +20,10 @@ public class Gimli {
     }
 
     public void automate(){
-        int Temps = 1440 * 100;
+        int Temps = 1440 * 1000;
         HashMap<String,Integer> recapTemps = new HashMap<>();
         String etatEnCours = null;
+        String etatPasEnCours = null;
         TypeEtat etatCourant;
         TypeEtat etatSuivant;
 
@@ -45,6 +46,7 @@ public class Gimli {
             this.temps += 20;
 
             etatSuivant = this.etat.getNomEtatTransition();
+            etatPasEnCours = this.etat.getNomEtat();
 
             String s = "" + etatCourant + etatSuivant;
             Integer integer = recapTemps.get(s);
