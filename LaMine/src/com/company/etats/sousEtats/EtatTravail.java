@@ -1,8 +1,11 @@
-package com.company.etats;
+package com.company.etats.sousEtats;
+
+import com.company.etats.Etat;
+import com.company.etats.Mine;
 
 import java.util.Random;
 
-public class EtatTravail extends Etat{
+public class EtatTravail extends Mine {
 
 
     public EtatTravail(float tauxAlcool) {

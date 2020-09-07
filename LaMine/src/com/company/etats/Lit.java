@@ -19,4 +19,9 @@ public class Lit extends Etat{
     public String getNomEtat() {
         return null;
     }
+
+    @Override
+    public TypeEtat getNomEtatTransition() {
+        return TypeEtat.Lit;
+    }
 }

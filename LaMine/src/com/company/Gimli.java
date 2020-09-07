@@ -1,8 +1,10 @@
 package com.company;
 
 import com.company.etats.Etat;
-import com.company.etats.EtatTravail;
+import com.company.etats.TypeEtat;
+import com.company.etats.sousEtats.EtatTravail;
 
+import java.lang.reflect.Type;
 import java.util.HashMap;
 
 public class Gimli {
@@ -21,6 +23,9 @@ public class Gimli {
         int Temps = 1440 * 100;
         HashMap<String,Integer> recapTemps = new HashMap<>();
         String etatEnCours = null;
+        TypeEtat etatCourant;
+        TypeEtat etatSuivant;
+
 
 
         while (this.temps <= Temps){
@@ -28,22 +33,34 @@ public class Gimli {
 
             this.etat.action();
 
-
+            etatCourant = this.etat.getNomEtatTransition();
             etatEnCours = this.etat.getNomEtat();
 
-            Integer integer = recapTemps.get(etatEnCours);
-            try{
-                integer +=1;
-                recapTemps.replace(etatEnCours,integer);
+            //Integer integer = recapTemps.get(etatEnCours);
 
-            }catch (Exception e){
-                recapTemps.put(etatEnCours,1);
-            }
 
 
 
             this.etat = this.etat.transition();
             this.temps += 20;
+
+            etatSuivant = this.etat.getNomEtatTransition();
+
+            String s = "" + etatCourant + etatSuivant;
+            Integer integer = recapTemps.get(s);
+
+            try{
+                integer +=1;
+                recapTemps.replace(s,integer);
+                //recapTemps.replace(etatEnCours,integer);
+
+
+            }catch (Exception e){
+                //recapTemps.put(etatEnCours,1);
+                recapTemps.put(s,1);
+            }
+
+
 
         }
         this.afficherRecapTemps(recapTemps);

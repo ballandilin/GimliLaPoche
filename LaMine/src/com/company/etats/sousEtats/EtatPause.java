@@ -1,6 +1,9 @@
-package com.company.etats;
+package com.company.etats.sousEtats;
 
-public class EtatPause extends Mine{
+import com.company.etats.Etat;
+import com.company.etats.Mine;
+
+public class EtatPause extends Mine {
     public EtatPause(float tauxAlcool) {
         super(tauxAlcool);
     }

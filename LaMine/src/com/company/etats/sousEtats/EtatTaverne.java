@@ -1,8 +1,11 @@
-package com.company.etats;
+package com.company.etats.sousEtats;
+
+import com.company.etats.Etat;
+import com.company.etats.Taverne;
 
 import java.util.Random;
 
-public class EtatTaverne extends Etat{
+public class EtatTaverne extends Taverne {
     public EtatTaverne(float tauxAlcool) {
         super(tauxAlcool);
     }

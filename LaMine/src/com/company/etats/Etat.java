@@ -39,6 +39,7 @@ public abstract class Etat {
     public abstract void action();
 
     public abstract String getNomEtat();
+    public abstract TypeEtat getNomEtatTransition();
 
 }
 
