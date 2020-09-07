@@ -18,7 +18,7 @@ public class Gimli {
     }
 
     public void automate(){
-        int Temps = 1140;
+        int Temps = 1440 * 100;
         HashMap<String,Integer> recapTemps = new HashMap<>();
         String etatEnCours = null;
 

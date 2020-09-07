@@ -1,6 +1,6 @@
 package com.company.etats;
 
-public class EtatPause extends Etat{
+public class EtatPause extends Mine{
     public EtatPause(float tauxAlcool) {
         super(tauxAlcool);
     }
