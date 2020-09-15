@@ -20,13 +20,22 @@ public class Gimli {
     }
 
     public void automate(){
-        int Temps = 1440 * 400000;
-        HashMap<String,Integer> recapTemps = new HashMap<>();
-        String etatEnCours = null;
-        String etatPasEnCours = null;
+        int Temps = 1440 * 100000;
+        //HashMap<String,Integer> recapTemps = new HashMap<>();
+        //String etatEnCours = null;
+        //String etatPasEnCours = null;
         TypeEtat etatCourant;
         TypeEtat etatSuivant;
 
+        int TaverneLit = 0;
+        int MineMine = 0;
+        int LitMine = 0;
+        int TaverneTaverne = 0;
+        int MineTaverne = 0;
+        int LitLit = 0;
+        int MineLit = 0;
+        int TaverneMine = 0;
+        int reste = 0;
 
         while (this.temps <= Temps){
             //System.out.println("-------------------------  " + this.temps + "  -------------------------");
@@ -47,9 +56,40 @@ public class Gimli {
             //etatPasEnCours = this.etat.getNomEtat();
 
             String s = "" + etatCourant + etatSuivant;
-            Integer integer = recapTemps.get(s);
+            //Integer integer = recapTemps.get(s);
 
-            try{
+
+            switch (s){
+                case "TaverneLit":
+                    TaverneLit++;
+                    break;
+                case "MineMine":
+                    MineMine++;
+                    break;
+                case "LitMine":
+                    LitMine++;
+                    break;
+                case "TaverneTaverne":
+                    TaverneTaverne++;
+                    break;
+                case "MineTaverne":
+                    MineTaverne++;
+                    break;
+                case "LitLit":
+                    LitLit++;
+                    break;
+                case "MineLit":
+                    MineLit++;
+                    break;
+                case "TaverneMine":
+                    TaverneMine++;
+                    break;
+                default:
+                    reste++;
+                    break;
+            }
+
+            /*try{
                 integer +=1;
                 recapTemps.replace(s,integer);
                 //recapTemps.replace(etatEnCours,integer);
@@ -58,11 +98,25 @@ public class Gimli {
             }catch (Exception e){
                 //recapTemps.put(etatEnCours,1);
                 recapTemps.put(s,1);
-            }
+            }*/
 
 
         }
-        this.afficherRecapTemps(recapTemps);
+        System.out.println("TaverneLit : " + TaverneLit);
+        System.out.println("MineMine : " + MineMine);
+        System.out.println("LitMine : " + LitMine);
+        System.out.println("TaverneTaverne : " + TaverneTaverne);
+        System.out.println("MineTaverne : " + MineTaverne);
+        System.out.println("LitLit : " + LitLit);
+        System.out.println("TaverneMine : " + TaverneMine);
+        System.out.println("MineLit : " + MineLit);
+        System.out.println("reste : " + reste);
+
+
+
+
+
+        //this.afficherRecapTemps(recapTemps);
 
     }
 
