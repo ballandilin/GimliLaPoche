@@ -18,14 +18,14 @@ public class EtatPause extends Mine {
             etat = new EtatTravail(super.getTauxAlcool());
         }
 
-        System.out.println("Taux Alcool : " + super.getTauxAlcool());
+        //System.out.println("Taux Alcool : " + super.getTauxAlcool());
 
         return etat;
     }
 
     @Override
     public void action() {
-        System.out.println("Etat Pause");
+        //System.out.println("Etat Pause");
         if (super.getTauxAlcool() >= 0.10){
             super.setTauxAlcool((float) (super.getTauxAlcool() - 0.10));
         }

@@ -32,7 +32,7 @@ public class EtatTravail extends Mine {
             etat = new EtatPause(super.getTauxAlcool());
         }
 
-        System.out.println("Taux Alcool : " + super.getTauxAlcool());
+        //System.out.println("Taux Alcool : " + super.getTauxAlcool());
 
 
         return etat;
@@ -40,7 +40,7 @@ public class EtatTravail extends Mine {
 
     @Override
     public void action() {
-        System.out.println("Etat Travail");
+        //System.out.println("Etat Travail");
 
         if(super.getTauxAlcool() >= 0.15){
             super.setTauxAlcool((float) (super.getTauxAlcool() - 0.15));

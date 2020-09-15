@@ -33,14 +33,14 @@ public class EtatTaverne extends Taverne {
         }
 
 
-        System.out.println("Taux Alcool : " + super.getTauxAlcool());
+        //System.out.println("Taux Alcool : " + super.getTauxAlcool());
 
         return etat;
     }
 
     @Override
     public void action() {
-        System.out.println("Etat Taverne");
+        //System.out.println("Etat Taverne");
 
         if (super.getTauxAlcool() >= 0.10){
             super.setTauxAlcool((float) (super.getTauxAlcool() - 0.1));

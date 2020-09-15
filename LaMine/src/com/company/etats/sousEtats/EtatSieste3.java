@@ -12,14 +12,14 @@ public class EtatSieste3 extends Lit {
     public Etat transition() {
         Etat etat = new EtatTravail(super.getTauxAlcool());
 
-        System.out.println("Taux Alcool : " + super.getTauxAlcool());
+        //System.out.println("Taux Alcool : " + super.getTauxAlcool());
 
         return etat;
     }
 
     @Override
     public void action() {
-        System.out.println("Etat Sieste 3");
+        //System.out.println("Etat Sieste 3");
 
 
     }

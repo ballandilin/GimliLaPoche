@@ -19,14 +19,14 @@ public class EtatForgeron extends Mine {
         else{
             etat = new EtatTravail(super.getTauxAlcool());
         }
-        System.out.println("Etat Forgeron");
-        System.out.println("Taux Alcool : " + super.getTauxAlcool());
+        //System.out.println("Etat Forgeron");
+        //System.out.println("Taux Alcool : " + super.getTauxAlcool());
         return etat;
     }
 
     @Override
     public void action() {
-        System.out.println("Le pioche est réparée");
+        //System.out.println("Le pioche est réparée");
         if (super.getTauxAlcool() >= 0.10){
             super.setTauxAlcool((float) (super.getTauxAlcool() - 0.1));
         }
