@@ -6,7 +6,7 @@ import com.company.etats.sousEtats.EtatTravail;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
-
+//{{57.3, 5.3,0,0,0,0.16}, {0, 1.8,20.8,3.5,0,0},{0,0,0,0,7.3,3.6}}
 public class Gimli {
 
     private long temps;
@@ -20,7 +20,7 @@ public class Gimli {
     }
 
     public void automate(){
-        int Temps = 1440 * 10000000;
+        long Temps = 1440 * 1000000000;
         HashMap<String,Integer> recapTemps = new HashMap<>();
         TypeEtat etatCourant;
         TypeEtat etatSuivant;
@@ -30,8 +30,6 @@ public class Gimli {
             this.etat.action();
 
             etatCourant = this.etat.getNomEtatTransition();
-
-
 
 
             this.etat = this.etat.transition();
