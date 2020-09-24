@@ -25,11 +25,15 @@ public class Gimli {
         TypeEtat etatCourant;
         TypeEtat etatSuivant;
 
+        TypeEtat etatEnCours;
+
+
         while (this.temps <= Temps){
             //System.out.println("-------------------------  " + this.temps + "  -------------------------");
             this.etat.action();
 
             etatCourant = this.etat.getNomEtatTransition();
+            etatEnCours = this.etat.getNomEtatTransition();
 
 
             this.etat = this.etat.transition();
@@ -37,18 +41,19 @@ public class Gimli {
 
             etatSuivant = this.etat.getNomEtatTransition();
 
-            String s = "" + etatCourant + etatSuivant;
+            //String s = "" + etatCourant + etatSuivant;
+            String s = "" + etatCourant;
             Integer integer = recapTemps.get(s);
 
             try{
                 integer +=1;
+                //recapTemps.replace(s,integer);
                 recapTemps.replace(s,integer);
-                //recapTemps.replace(etatEnCours,integer);
 
 
             }catch (Exception e){
-                //recapTemps.put(etatEnCours,1);
                 recapTemps.put(s,1);
+                //recapTemps.put(s,1);
             }
 
 
