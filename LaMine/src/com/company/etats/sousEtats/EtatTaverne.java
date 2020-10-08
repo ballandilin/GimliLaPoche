@@ -5,11 +5,23 @@ import com.company.etats.Taverne;
 
 import java.util.Random;
 
+/**
+ * Classe qui représente l'état EtatTaverne qui hérite de Taverne
+ */
 public class EtatTaverne extends Taverne {
+
+    /**
+     * Constructeur de EtatTaverne
+     * @param tauxAlcool qui initialise l'attribut tauxAlcool
+     */
     public EtatTaverne(float tauxAlcool) {
         super(tauxAlcool);
     }
 
+    /**
+     * Fonction qui permet de changer d'état en fonction d'un nombre aléatoire et qui augmente en fonction du taux d'alcool
+     * @return le nouvel état
+     */
     @Override
     public Etat transition() {
         Etat etat;
@@ -38,6 +50,9 @@ public class EtatTaverne extends Taverne {
         return etat;
     }
 
+    /**
+     * Fonction qui enlève 0.1g d'alcool à Gimli et lui augmente sont taux d'alcool de 3 bières
+     */
     @Override
     public void action() {
         //System.out.println("Etat Taverne");
@@ -55,6 +70,10 @@ public class EtatTaverne extends Taverne {
 
     }
 
+    /**
+     * Fonction qui retourne le nom de l'état
+     * @return le nom de l'état
+     */
     @Override
     public String getNomEtat() {
         return "EtatTaverne";

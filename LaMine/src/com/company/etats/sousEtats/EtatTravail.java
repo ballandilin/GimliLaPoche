@@ -5,13 +5,23 @@ import com.company.etats.Mine;
 
 import java.util.Random;
 
+/**
+ * Classe qui représente l'état EtatTravail qui hérite de Mine
+ */
 public class EtatTravail extends Mine {
 
-
+    /**
+     * Constructeur de EtatTravail
+     * @param tauxAlcool qui initialise l'attribut tauxAlcool
+     */
     public EtatTravail(float tauxAlcool) {
         super(tauxAlcool);
     }
 
+    /**
+     * Fonction qui permet de changer d'état, si il casse sa pioche EtatForgeron sinon EtatPause
+     * @return le nouvel état
+     */
     @Override
     public Etat transition() {
         Etat etat;

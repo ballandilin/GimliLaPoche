@@ -7,11 +7,18 @@ import com.company.etats.sousEtats.EtatTravail;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 //{{57.3, 5.3,0,0,0,0.16}, {0, 1.8,20.8,3.5,0,0},{0,0,0,0,7.3,3.6}}
+
+/**
+ * Classe qui représente Gimli
+ */
 public class Gimli {
 
     private long temps;
     private Etat etat;
 
+    /**
+     * Constructeur de Gimli, initialise les attributs temps et etat puis lance l'automate
+     */
     public Gimli() {
         this.temps = 0;
         this.etat = new EtatTravail(0);
@@ -19,6 +26,9 @@ public class Gimli {
 
     }
 
+    /**
+     * Fonction qui simule les journée de Gimli
+     */
     public void automate(){
         long Temps = 1440 * 1000000000;
         HashMap<String,Integer> recapTemps = new HashMap<>();
@@ -64,6 +74,11 @@ public class Gimli {
 
     }
 
+
+    /**
+     * Fonction qui affiche les résultats
+     * @param recapTemps sera afficher sur la console
+     */
     public void afficherRecapTemps(HashMap recapTemps){
         System.out.println("-------------------------  Recap Temps  -------------------------");
 
