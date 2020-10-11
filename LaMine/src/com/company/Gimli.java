@@ -47,8 +47,8 @@ public class Gimli {
 
             etatSuivant = this.etat.getNomEtatTransition();
 
-            //String s = "" + etatCourant + etatSuivant; //Permet d'obtenir le nombre de transition entre chaque état
-            String s = "" + etatCourant; //Permet d'obtenir le temps passe dans chaque état
+            String s = "" + etatCourant + etatSuivant; //Permet d'obtenir le nombre de transition entre chaque état
+            //String s = "" + etatCourant; //Permet d'obtenir le temps passe dans chaque état
 
             Integer integer = recapTemps.get(s);
 
