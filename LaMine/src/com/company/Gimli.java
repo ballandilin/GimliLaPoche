@@ -30,43 +30,38 @@ public class Gimli {
      * Fonction qui simule les journée de Gimli
      */
     public void automate(){
-        long Temps = 1440 * 1000000000;
+        long Temps = 1440 * 1000000;
         HashMap<String,Integer> recapTemps = new HashMap<>();
         TypeEtat etatCourant;
         TypeEtat etatSuivant;
 
-        TypeEtat etatEnCours;
 
-
-        while (this.temps <= Temps){
+        while (this.temps < Temps){
             //System.out.println("-------------------------  " + this.temps + "  -------------------------");
             this.etat.action();
 
             etatCourant = this.etat.getNomEtatTransition();
-            etatEnCours = this.etat.getNomEtatTransition();
-
 
             this.etat = this.etat.transition();
-            this.temps += 20;
+
 
             etatSuivant = this.etat.getNomEtatTransition();
 
-            //String s = "" + etatCourant + etatSuivant;
-            String s = "" + etatCourant;
+            //String s = "" + etatCourant + etatSuivant; //Permet d'obtenir le nombre de transition entre chaque état
+            String s = "" + etatCourant; //Permet d'obtenir le temps passe dans chaque état
+
             Integer integer = recapTemps.get(s);
 
             try{
                 integer +=1;
-                //recapTemps.replace(s,integer);
                 recapTemps.replace(s,integer);
 
 
             }catch (Exception e){
                 recapTemps.put(s,1);
-                //recapTemps.put(s,1);
             }
 
-
+            this.temps += 20;
         }
 
 
