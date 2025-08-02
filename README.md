@@ -125,7 +125,8 @@ Pour modifier le comportement de la simulation :
 
 ## 👥 Auteur
 
-- **Benjamin Milhet** - Développement initial
+- **Benjamin Milhet**
+- **Nicolas Benoit**
 
 ## 📝 Notes techniques
 
