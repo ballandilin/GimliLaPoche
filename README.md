@@ -4,13 +4,13 @@
 
 *Projet réalisé dans le cadre du cursus DUT Informatique*
 
-## 📋 Description
+## Description
 
 GimliLaPoche est une simulation basée sur un automate à états finis qui modélise la vie quotidienne de Gimli, un nain mineur. Le programme simule ses activités pendant une journée complète (1440 minutes) en prenant en compte son taux d'alcoolémie et ses différents États comportementaux.
 
 ![Automate Gimli](automate.graphml)
 
-## 🎯 Fonctionnalités
+## Fonctionnalités
 
 - **Simulation temporelle** : Simulation d'une journée complète par pas de 20 minutes
 - **Gestion de l'alcoolémie** : Système réaliste de consommation et d'élimination d'alcool
@@ -18,7 +18,7 @@ GimliLaPoche est une simulation basée sur un automate à états finis qui modé
 - **Statistiques** : Comptage des transitions entre états
 - **Pattern State** : Implementation du design pattern State pour une architecture propre
 
-## 🏗️ Architecture
+## Architecture
 
 ### États principaux
 - **Mine** : États liés au travail (Travail, Pause, Forgeron)
@@ -34,7 +34,7 @@ GimliLaPoche est une simulation basée sur un automate à états finis qui modé
 6. **EtatSieste2** : Deuxième phase de sommeil
 7. **EtatSieste3** : Dernière phase avant réveil
 
-## 🔄 Logique de transition
+## Logique de transition
 
 ### Probabilités dynamiques
 - **Cassage de pioche** : 15% de base + 8% par gramme d'alcool
@@ -45,7 +45,7 @@ GimliLaPoche est une simulation basée sur un automate à états finis qui modé
 - **Taux par bière** : ~0.39g (28g / (102kg × 0.7))
 - **Élimination** : 0.1-0.15g par cycle selon l'activité
 
-## 🚀 Installation et utilisation
+## Installation et utilisation
 
 ### Prérequis
 - Java 8 ou supérieur
@@ -66,7 +66,7 @@ java com.company.Main
 2. Configurer le SDK Java
 3. Exécuter la classe `Main.java`
 
-## 📊 Résultats
+## Résultats
 
 Le programme affiche un récapitulatif des transitions entre états sous forme de HashMap :
 ```
@@ -74,7 +74,7 @@ Le programme affiche un récapitulatif des transitions entre états sous forme d
 {MineTaverne=42, TaverneTaverne=156, MineMine=1832, ...}
 ```
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 GimliLaPoche/
@@ -106,7 +106,7 @@ GimliLaPoche/
                     └── EtatSieste3.java
 ```
 
-## 🎲 Paramètres de simulation
+## Paramètres de simulation
 
 - **Durée totale** : 1440 minutes (24h)
 - **Pas de temps** : 20 minutes
@@ -114,7 +114,7 @@ GimliLaPoche/
 - **Facteur d'hydratation** : 0.7
 - **Teneur en alcool des bières** : 28g par bière
 
-## 📈 Personnalisation
+## Personnalisation
 
 Pour modifier le comportement de la simulation :
 
@@ -123,19 +123,19 @@ Pour modifier le comportement de la simulation :
 3. **Durée** : Changer la variable `Temps` dans `Gimli.automate()`
 4. **Pas de temps** : Modifier l'incrément `this.temps += 20`
 
-## 👥 Auteur
+## Auteur
 
 - **Benjamin Milhet**
 - **Nicolas Benoit**
 
-## 📝 Notes techniques
+## Notes techniques
 
 - Utilisation du **Design Pattern State** pour une architecture modulaire
 - Gestion des transitions probabilistes avec `Random`
 - Système de récupération des statistiques via HashMap
 - Code commenté et documenté en JavaDoc
 
-## 🐛 Problèmes connus
+## Problèmes connus
 
 - Bug potentiel dans `EtatForgeron.transition()` : `Math.random()*3` devrait être `new Random().nextInt(3)`
 - Classe `GimliTest` obsolète mais conservée pour référence
